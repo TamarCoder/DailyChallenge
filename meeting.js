@@ -4,6 +4,7 @@ class Meeting {
     onlineReservations = 0;
 
     setCapacity(capacity){
+       //Determines the maximum number of appointments.
         if (typeof capacity !== 'number' || capacity < 0) {
             return 'You are exceeding the maximum number';
         } else {
@@ -11,8 +12,8 @@ class Meeting {
             return true;
         }
     }
-
     getReservations(){
+        //Returns the currently reserved appointments
         return {
             physical: this.reservations,
             online: this.onlineReservations
@@ -20,10 +21,12 @@ class Meeting {
     }
 
     getCapacity(){
+        //Returns the maximum number of appointments.
         return this.capacity;
     }
 
     reserveMeeting(data) {
+        //Checks if an appointment is available and reserves it if so.
         const type = typeof data.getType === 'function' ? data.getType() : data.type;
         if (type === 'physical') {
             if (this.reservations < this.capacity) {
@@ -41,6 +44,7 @@ class Meeting {
     }
 
     checkMeetingAvailability(){
+        //Checks if a physical meeting location is available.
          return this.reservations < this.capacity;
     }
 }
