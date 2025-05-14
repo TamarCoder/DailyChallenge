@@ -14,7 +14,6 @@ function numberRotation(number) {
     if (number < 10 || number === 0) {
         return 'The number provided is invalid.';
     }
-
     let isString = number.toString(); // number  გადავიყვანე სტრინგში 
     let isArrayString = isString.split(''); // სტრინგის გადავაქციე მასივად
     let rotations = [number]; // ახალი მასივის შესახად , number - შემაქვს იმიტომ რომ პირველი ციფრი არ უნდა შეიცვალოს.
@@ -28,9 +27,7 @@ function numberRotation(number) {
         rotations.push(isNumber); // როტაციები შევინახავთ
         isArrayString = rotated; // ბოლო ელემენტამდე
     }
-
     return rotations; // საბოლოო მასივი
 }
-
 const number = 197; // input
 console.log(numberRotation(number)); 
