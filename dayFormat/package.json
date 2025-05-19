@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "dayjs": "^1.11.13"
+  },
+  "name": "dayformat",
+  "version": "1.0.0",
+  "main": "timeFormating.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

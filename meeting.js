@@ -6,7 +6,7 @@ class Meeting {
     setCapacity(capacity){
        //Determines the maximum number of appointments.
         if (typeof capacity !== 'number' || capacity < 0) {
-            return 'You are exceeding the maximum number';
+            throw new Error ('You are exceeding the maximum number');
         } else {
             this.capacity = capacity;
             return true;
