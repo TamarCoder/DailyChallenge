@@ -13,26 +13,22 @@ const cart = [
 
 
 
-function isCustomCart () {
     let cartTotal = 0;
-
     for (let i = 0; i < cart.length; i ++){
         let isQuanity = cart[i].quantity;
         let isProduct = cart[i].product;
         let isStock = isProduct.stock;
         let priceToUse;
+
         if (isStock <= 0) {
            continue
         }
         priceToUse = isProduct.salePrice ? isProduct.salePrice : isProduct.price;
 
         let quantityToSell = isQuanity > isStock ? isStock : isQuanity;
-        // console.log(quantityToSell)
         cartTotal += quantityToSell * priceToUse;
+
     }
+console.log(cartTotal)
 
-    return cartTotal;
-}
-
-console.log(isCustomCart());
 // isCustomCart()
